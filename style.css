@@ -939,6 +939,7 @@ body {
 .upload-area__title {
   font-size: 1.8rem;
   font-weight: 500;
+  color: var(--clr-light-gray);
   margin-bottom: 0.3125rem;
 }
 
@@ -1093,7 +1094,7 @@ body {
 .file-details__title {
   font-size: 1.125rem;
   font-weight: 500;
-  color: var(--clr-light-gray);
+  color: var(--clr-gray);
 }
 
 /* Uploaded File */
