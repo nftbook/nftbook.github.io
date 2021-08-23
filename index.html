@@ -24,16 +24,11 @@ const mint = async () => {
       image: "/ipfs/" + cid,
       attributes: [
             { trait_type: "powered by", value: "NFTBOOK.COM.BR" },
-            { trait_type: "curator", value: account },
             { trait_type: "date", value: new Date().toUTCString() },
             { trait_type: "license", value: "SEE LICENSE AT https://heavymetalcave.github.io" }
           ]
     },
-  supply: 666,
-  royalties: [{
-    account: account,
-    value: 2000
-  }]
+  supply: 666
   })
   return token
 }
