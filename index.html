@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - NFTBOOK PILOT</title>
+  <title>NFTBOOK.COM.BR</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 
@@ -19,10 +19,21 @@ const mint = async () => {
   let cid = await rarepress.add(file2)
   let token = await rarepress.create({
     metadata: {
-      name: "NFTBOOK.COM",
-      description: "Coleção de Testes do Tiago",
-      image: "/ipfs/" + cid
-    }
+      name: "PLATOS'S CAVE COLLECTION",
+      description: "Plato's Cave Logo is the foundation of the NFT Heavy Metal Collection",
+      image: "/ipfs/" + cid,
+      attributes: [
+            { trait_type: "powered by", value: "NFTBOOK.COM.BR" },
+            { trait_type: "curator", value: account },
+            { trait_type: "date", value: new Date().toUTCString() },
+            { trait_type: "license", value: "SEE LICENSE AT https://heavymetalcave.github.io" }
+          ]
+    },
+  supply: 666,
+  royalties: [{
+    account: account,
+    value: 2000
+  }]
   })
   return token
 }
@@ -34,7 +45,7 @@ const sell = async (tokenId) => {
     },
     with: {
       type: "ETH",
-      value: 10**18
+      value: 9000000000000000
     }
   })
   return trade
