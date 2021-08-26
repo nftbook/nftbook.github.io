@@ -12,7 +12,7 @@
 <script src="https://unpkg.com/rarepress.js@0.0.15"></script>
 <script>
 const rarepress = new Rarepress();
-const mint = async () => {
+const mint = async (account) => {
  
   let image = document.querySelector('#fileInput')
   let file2 = image.files[0];
@@ -25,10 +25,14 @@ const mint = async () => {
       attributes: [
             { trait_type: "powered by", value: "NFTBOOK.COM.BR" },
             { trait_type: "date", value: new Date().toUTCString() },
-            { trait_type: "license", value: "SEE LICENSE AT https://heavymetalcave.github.io" }
+            { trait_type: "license", value: "SEE FULL LICENSE AT https://heavymetalcave.github.io/LICENSE" }
           ]
     },
-  supply: 666
+    supply: 666,
+    royalties: [{
+      account: account,
+      value: 2000
+    }]
   })
   return token
 }
@@ -46,8 +50,8 @@ const sell = async (tokenId) => {
   return trade
 };
 const mintAndSell = async () => {
-  await rarepress.init({ host: "https://rarepress.org/v0" })
-  let token = await mint()
+  let account = await rarepress.init({ host: "https://rarepress.org/v0" })
+  let token = await mint(account)
   let trade = await sell(token.tokenId)
   document.querySelector("pre").innerHTML = JSON.stringify(trade, null, 2)
 }
