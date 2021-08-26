@@ -1,0 +1,4 @@
+<script>
+var audio = new Audio("https://github.com/nftbook/nftbook.github.io/blob/main/MEDIA/sound.wav")
+audio.play()
+</script>
