@@ -1,3 +1,9 @@
+function load_home() {
+  document.getElementById("main-container").innerHTML='<object type="text/html" data="player.html" ></object>';
+}
+
+
+
 // Songs from https://www.conversesamplelibrary.com/
 var songs = [
     {
