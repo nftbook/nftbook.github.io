@@ -458,7 +458,7 @@ body.light-mode:before {
   left: 0;
   top: 0;
   pointer-events: all;
-  background-color: rgba(36, 39, 59, 0.8);
+  background-color: rgba(15, 44, 228, 0.8);
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;

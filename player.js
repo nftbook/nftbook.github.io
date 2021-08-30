@@ -1,18 +1,16 @@
-function load_home() {
-  document.getElementById("main-container").innerHTML='<object type="text/html" data="player.html" ></object>';
-}
+
 
 
 
 // Songs from https://www.conversesamplelibrary.com/
 var songs = [
     {
-      title: "LA Chill Tour",
+      title: "LA       songURL: "https://d34x6xks9kc6p2.cloudfront.net/8bd0ca4f-1b57-47e9-8878-516d14196d86/8bd0ca4f-1b57-47e9-8878-516d14196d86.mp3" },
+Chill Tour",
       songURL: "http://quranifybackend-env.35ckeb3kuh.us-east-2.elasticbeanstalk.com/tracks/v2/5ccdb8b4ae0ef1a16196477c" },
     
     {
       title: "This is it band",
-      songURL: "https://d34x6xks9kc6p2.cloudfront.net/8bd0ca4f-1b57-47e9-8878-516d14196d86/8bd0ca4f-1b57-47e9-8878-516d14196d86.mp3" },
     
     {
       title: "LA Fusion Jam",
