@@ -293,6 +293,17 @@ body.light-mode:before {
   margin-left: 22px;
 }
 
+.logo-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid var(--theme-color);
+  margin-left: 22px;
+}
+
+
 .wide .header-menu,
 .wide .header-profile {
   display: none;
